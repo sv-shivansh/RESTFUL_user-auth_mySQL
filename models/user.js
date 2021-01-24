@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('<database_name>', '<user>', '<password>', {
+var sequelize = new Sequelize('user_auth', 'root', '1234', {
     host: 'localhost',
     dialect: 'mysql'});
 
