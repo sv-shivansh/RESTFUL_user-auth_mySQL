@@ -1,9 +1,9 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('user_auth', 'root', '1234', {
+var sequelize = new Sequelize('<database_name>', '<user>', '<password>', {
     host: 'localhost',
     dialect: 'mysql'});
 
-var User = sequelize.define('user',{
+var User = sequelize.define('User',{
     name: {
         type: Sequelize.STRING
     },
@@ -13,9 +13,7 @@ var User = sequelize.define('user',{
     password:{
         type: Sequelize.STRING
     },
-    Date: { 
-        type: Sequelize.DATE, defaultValue: Sequelize.NOW 
-    }
 });
 sequelize.sync()
+
 module.exports = User
